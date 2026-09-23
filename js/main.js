@@ -23,7 +23,14 @@
   });
 
   /* ---------- Pestañas ---------- */
-  var tabs=root.querySelectorAll('.cel-tab'), panels=root.querySelectorAll('.cel-panel'), nav=root.querySelector('.cel-nav'), footer=root.querySelector('.cel-foot');
+  var tabs=root.querySelectorAll('.cel-tab'), panels=root.querySelectorAll('.cel-panel'), nav=root.querySelector('.cel-nav'), footer=root.querySelector('.cel-foot'), brand=root.querySelector('.cel-brand');
+  function home(){
+    panels.forEach(function(p){p.classList.remove('is-on');});
+    tabs.forEach(function(t){t.classList.remove('is-on');});
+    if(footer) footer.classList.remove('is-visible');
+    try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
   function show(id,scroll){
     var ok=false;
     panels.forEach(function(p){var on=p.getAttribute('data-cel-panel')===id;p.classList.toggle('is-on',on);if(on)ok=true;});
@@ -35,6 +42,7 @@
     if(scroll){var y=nav.getBoundingClientRect().top+window.pageYOffset-10;
       if(nav.getBoundingClientRect().top<0||scroll==='force') window.scrollTo({top:y,behavior:'smooth'});}
   }
+  if(brand) brand.addEventListener('click',home);
   tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-cel-tab'),true);});});
   root.querySelectorAll('[data-cel-go]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();show(a.getAttribute('data-cel-go'),'force');});});
   var h=(location.hash||'').replace('#','');
