@@ -1,7 +1,7 @@
 /* Centro Editorial Lince — estilos */
 html{scroll-behavior:smooth}
 body{margin:0;background:#e9e6df}
-#editorial-lince{--cel-mag:#a3107a;--cel-mag-dk:#6b0a50;--cel-mag-lt:#f7e8f1;--cel-crema:#f7f6ec;--cel-tinta:#26202a;--cel-gris:#5d5560;--cel-linea:#e4dfd3;
+#editorial-lince{--cel-mag:#23636a;--cel-mag-dk:#17464b;--cel-mag-lt:#e5f0ef;--cel-crema:#f6f5ef;--cel-tinta:#283334;--cel-gris:#5b6767;--cel-linea:#d9ded9;
   font-family:'Raleway',system-ui,sans-serif;color:var(--cel-tinta);background:var(--cel-crema);
   width:100%;margin:0;line-height:1.6;box-sizing:border-box}
 #editorial-lince *,#editorial-lince *::before,#editorial-lince *::after{box-sizing:border-box}
@@ -76,13 +76,14 @@ body{margin:0;background:#e9e6df}
 #editorial-lince .cel-cta p{font-weight:600;margin-bottom:14px}
 
 /* ---------- CONTACTO ---------- */
-#editorial-lince .cel-foot{background:var(--cel-mag-dk);color:#fff;padding:36px 20px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+#editorial-lince .cel-foot{display:none;background:var(--cel-mag-dk);color:#fff;padding:36px 20px;flex-direction:column;align-items:center;gap:20px;text-align:center}
+#editorial-lince .cel-foot.is-visible{display:flex}
 #editorial-lince .cel-foot img{width:220px;filter:brightness(0) invert(1)}
 #editorial-lince .cel-foot h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:600;color:#fff;margin:0 0 6px;text-transform:none}
 #editorial-lince .cel-foot p{color:rgba(255,255,255,.9);margin:0 0 4px;font-size:15px}
 #editorial-lince .cel-foot strong{color:#fff;font-weight:700}
 #editorial-lince .cel-foot a{color:#fff;text-decoration:underline;text-underline-offset:3px}
-#editorial-lince .cel-foot a:hover{color:#f3c9e3}
+#editorial-lince .cel-foot a:hover{color:#b9d8d5}
 
 @media (min-width:640px){
   #editorial-lince .cel-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}

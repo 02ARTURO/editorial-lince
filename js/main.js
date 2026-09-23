@@ -23,11 +23,12 @@
   });
 
   /* ---------- Pestañas ---------- */
-  var tabs=root.querySelectorAll('.cel-tab'), panels=root.querySelectorAll('.cel-panel'), nav=root.querySelector('.cel-nav');
+  var tabs=root.querySelectorAll('.cel-tab'), panels=root.querySelectorAll('.cel-panel'), nav=root.querySelector('.cel-nav'), footer=root.querySelector('.cel-foot');
   function show(id,scroll){
     var ok=false;
     panels.forEach(function(p){var on=p.getAttribute('data-cel-panel')===id;p.classList.toggle('is-on',on);if(on)ok=true;});
     if(!ok) return;
+    if(footer) footer.classList.add('is-visible');
     tabs.forEach(function(t){var on=t.getAttribute('data-cel-tab')===id;t.classList.toggle('is-on',on);
       if(on&&t.scrollIntoView){var box=t.parentNode;box.scrollLeft=t.offsetLeft-(box.clientWidth-t.clientWidth)/2;}});
     try{history.replaceState(null,'','#'+id);}catch(e){}
