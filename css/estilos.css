@@ -1,7 +1,7 @@
 /* Centro Editorial Lince — estilos */
 html{scroll-behavior:smooth}
 body{margin:0;background:#e9e6df}
-#editorial-lince{--cel-mag:#23636a;--cel-mag-dk:#17464b;--cel-mag-lt:#e5f0ef;--cel-crema:#f6f5ef;--cel-tinta:#000;--cel-gris:#5b6767;--cel-linea:#d9ded9;
+#editorial-lince{--cel-mag:#852244;--cel-mag-dk:#852244;--cel-mag-lt:#f3dfe7;--cel-tinto:#852244;--cel-crema:#f6f5ef;--cel-tinta:#000;--cel-gris:#5b6767;--cel-linea:#d9ded9;
   font-family:'Raleway',system-ui,sans-serif;color:var(--cel-tinta);background:var(--cel-crema);
   width:100%;margin:0;line-height:1.6;box-sizing:border-box}
 #editorial-lince *,#editorial-lince *::before,#editorial-lince *::after{box-sizing:border-box}
@@ -16,14 +16,15 @@ body{margin:0;background:#e9e6df}
 #editorial-lince .cel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;
   background:rgba(255,255,255,.85);color:var(--cel-mag);font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;
   box-shadow:0 2px 8px rgba(0,0,0,.15);padding:0;z-index:3;transition:background .2s,color .2s}
-#editorial-lince .cel-arrow:hover,#editorial-lince .cel-arrow:focus{background:var(--cel-mag);color:#fff;outline:none}
+#editorial-lince .cel-arrow:hover,#editorial-lince .cel-arrow:focus{background:var(--cel-tinto);color:#fff;outline:none}
 #editorial-lince .cel-prev{left:12px}#editorial-lince .cel-next{right:12px}
 #editorial-lince .cel-dots{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:3}
 #editorial-lince .cel-dot{width:10px;height:10px;border-radius:50%;border:2px solid #fff;background:rgba(255,255,255,.4);padding:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
-#editorial-lince .cel-dot.is-on{background:var(--cel-mag)}
+#editorial-lince .cel-dot.is-on{background:var(--cel-tinto)}
 
 /* ---------- MENÚ ---------- */
 #editorial-lince .cel-nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--cel-linea);box-shadow:0 4px 14px -10px rgba(0,0,0,.35)}
+#editorial-lince .cel-menu-toggle{display:none}
 #editorial-lince .cel-nav-in{display:flex;gap:6px;padding:10px 12px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 #editorial-lince .cel-nav-in::-webkit-scrollbar{display:none}
 #editorial-lince .cel-brand{flex:0 0 38px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--cel-linea);background:#fff;padding:0;cursor:pointer;transition:border-color .2s,background .2s}
@@ -32,24 +33,25 @@ body{margin:0;background:#e9e6df}
 #editorial-lince .cel-tab{flex:0 0 auto;white-space:nowrap;font-family:'Raleway',sans-serif;font-size:14px;font-weight:600;
   padding:9px 16px;border-radius:999px;border:1px solid transparent;background:transparent;color:var(--cel-gris);
   cursor:pointer;text-transform:none;letter-spacing:0;line-height:1.2;transition:background .2s,color .2s,border-color .2s;margin:0}
-#editorial-lince .cel-tab:hover,#editorial-lince .cel-tab:focus{color:var(--cel-mag);border-color:var(--cel-mag-lt);background:var(--cel-mag-lt);outline:none}
-#editorial-lince .cel-tab.is-on,#editorial-lince .cel-tab.is-on:hover,#editorial-lince .cel-tab.is-on:focus{background:var(--cel-mag);color:#fff;border-color:var(--cel-mag)}
+#editorial-lince .cel-tab:hover,#editorial-lince .cel-tab:focus{color:#fff;border-color:var(--cel-tinto);background:var(--cel-tinto);outline:none}
+#editorial-lince .cel-tab.is-on{background:var(--cel-mag);color:#fff;border-color:var(--cel-mag)}
+#editorial-lince .cel-tab.is-on:hover,#editorial-lince .cel-tab.is-on:focus{background:var(--cel-tinto);color:#fff;border-color:var(--cel-tinto)}
 
 /* ---------- PANELES ---------- */
 #editorial-lince .cel-panel{display:none;padding:40px 20px 56px;scroll-margin-top:70px}
 #editorial-lince .cel-panel.is-on{display:block;animation:celIn .45s ease}
 @keyframes celIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 #editorial-lince .cel-h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(30px,5vw,44px);line-height:1.1;
-  color:var(--cel-mag);text-align:center;margin:0 auto 32px;display:flex;align-items:center;justify-content:center;gap:16px;max-width:900px;text-transform:none;letter-spacing:0}
-#editorial-lince .cel-h2::before,#editorial-lince .cel-h2::after{content:"";flex:0 0 48px;height:2px;background:var(--cel-mag)}
-#editorial-lince .cel-h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:28px;line-height:1.2;color:var(--cel-mag-dk);margin:40px 0 12px;text-transform:none;letter-spacing:0}
+  color:#000;text-align:center;margin:0 auto 32px;display:flex;align-items:center;justify-content:center;gap:16px;max-width:900px;text-transform:none;letter-spacing:0}
+#editorial-lince .cel-h2::before,#editorial-lince .cel-h2::after{content:"";flex:0 0 48px;height:2px;background:var(--cel-tinto)}
+#editorial-lince .cel-h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:28px;line-height:1.2;color:#000;margin:40px 0 12px;text-transform:none;letter-spacing:0}
 #editorial-lince .cel-prose{max-width:72ch;margin:0 auto}
 #editorial-lince .cel-prose p{font-size:17px;line-height:1.75;color:var(--cel-tinta);margin:0 0 18px}
 #editorial-lince .cel-lead{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(21px,2.6vw,25px);line-height:1.5;color:var(--cel-tinta);
   border-left:3px solid var(--cel-mag);padding-left:20px;margin:0 0 8px}
 #editorial-lince .cel-funciones{list-style:none;padding:0;margin:8px 0 0;counter-reset:cel}
 #editorial-lince .cel-funciones li{counter-increment:cel;position:relative;padding:14px 0 14px 56px;border-bottom:1px solid var(--cel-linea);font-size:17px;line-height:1.6;margin:0;list-style:none}
-#editorial-lince .cel-funciones li::before{content:counter(cel,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:600;color:var(--cel-mag)}
+#editorial-lince .cel-funciones li::before{content:counter(cel,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:600;color:#000}
 
 /* ---------- LIBROS ---------- */
 #editorial-lince .cel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px}
@@ -61,22 +63,22 @@ body{margin:0;background:#e9e6df}
 #editorial-lince .cel-book-t{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:700;line-height:1.2;color:var(--cel-tinta);margin:0}
 #editorial-lince .cel-book-a{font-size:13px;color:var(--cel-gris);margin:0}
 #editorial-lince .cel-book-d{font-size:14px;line-height:1.5;color:var(--cel-tinta);margin:4px 0 0}
-#editorial-lince .cel-isbn{font-size:12px;font-weight:600;color:var(--cel-mag-dk);margin:auto 0 0;padding-top:8px;font-variant-numeric:tabular-nums}
+#editorial-lince .cel-isbn{font-size:12px;font-weight:600;color:#000;margin:auto 0 0;padding-top:8px;font-variant-numeric:tabular-nums}
 #editorial-lince .cel-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;align-self:flex-start;margin-top:8px;padding:9px 16px;border-radius:999px;
-  background:#852244;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:2px solid #852244;transition:background .2s,color .2s}
-#editorial-lince .cel-btn:hover,#editorial-lince .cel-btn:focus{background:#fff;color:#852244;outline:none}
+  background:var(--cel-mag);color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:2px solid var(--cel-mag);transition:background .2s,color .2s}
+#editorial-lince .cel-btn:hover,#editorial-lince .cel-btn:focus{background:var(--cel-tinto);color:#fff;outline:none}
 #editorial-lince .cel-btn-lg{font-size:16px;padding:13px 26px;align-self:center}
 
 /* ---------- ESTADOS VACÍOS ---------- */
 #editorial-lince .cel-empty{text-align:center;padding:48px 20px;border:1px dashed #d6cfc0;border-radius:12px;background:#fff;max-width:640px;margin:0 auto}
-#editorial-lince .cel-empty p{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-style:italic;color:var(--cel-mag);margin:0}
+#editorial-lince .cel-empty p{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-style:italic;color:#000;margin:0}
 
 /* ---------- REVISTAS ---------- */
 #editorial-lince .cel-cta{text-align:center;margin-top:28px}
 #editorial-lince .cel-cta p{font-weight:600;margin-bottom:14px}
 
 /* ---------- CONTACTO ---------- */
-#editorial-lince .cel-foot{display:none;background:var(--cel-mag-dk);color:#fff;padding:36px 20px;flex-direction:column;align-items:center;gap:20px;text-align:center}
+#editorial-lince .cel-foot{display:none;background:var(--cel-tinto);color:#fff;padding:36px 20px;flex-direction:column;align-items:center;gap:20px;text-align:center}
 #editorial-lince .cel-foot.is-visible{display:flex}
 #editorial-lince .cel-foot img{width:220px;filter:brightness(0) invert(1)}
 #editorial-lince .cel-foot h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:600;color:#fff;margin:0 0 6px;text-transform:none}
@@ -97,6 +99,15 @@ body{margin:0;background:#e9e6df}
   #editorial-lince .cel-foot-txt{border-left:1px solid rgba(255,255,255,.35);padding-left:48px}
 }
 @media (max-width:600px){
+  #editorial-lince .cel-menu-toggle{display:flex;width:42px;height:42px;margin:8px 12px;flex-direction:column;align-items:center;justify-content:center;gap:5px;border:1px solid var(--cel-tinto);border-radius:6px;background:#fff;color:var(--cel-tinto);cursor:pointer}
+  #editorial-lince .cel-menu-toggle span{display:block;width:21px;height:2px;background:currentColor;transition:transform .2s,opacity .2s}
+  #editorial-lince .cel-menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  #editorial-lince .cel-menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  #editorial-lince .cel-menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  #editorial-lince .cel-nav-in{display:none;flex-direction:column;align-items:stretch;gap:6px;padding:0 12px 12px;overflow:visible}
+  #editorial-lince .cel-nav-in.is-open{display:flex}
+  #editorial-lince .cel-nav-in .cel-brand{align-self:flex-start}
+  #editorial-lince .cel-nav-in .cel-tab{width:100%;text-align:left;border-radius:6px}
   #editorial-lince .cel-arrow{display:none}
   #editorial-lince .cel-dots{bottom:5px}
   #editorial-lince .cel-h2::before,#editorial-lince .cel-h2::after{flex-basis:24px}
