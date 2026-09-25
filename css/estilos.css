@@ -4,11 +4,13 @@ body{margin:0;background:#e9e6df}
 #editorial-lince{--cel-mag:#852244;--cel-mag-dk:#852244;--cel-mag-lt:#f3dfe7;--cel-tinto:#852244;--cel-crema:#f6f5ef;--cel-tinta:#000;--cel-gris:#5b6767;--cel-linea:#d9ded9;
   font-family:'Raleway',system-ui,sans-serif;color:var(--cel-tinta);background:var(--cel-crema);
   width:100%;margin:0;line-height:1.6;box-sizing:border-box}
+#editorial-lince.cel-site{min-height:100vh;display:flex;flex-direction:column}
 #editorial-lince *,#editorial-lince *::before,#editorial-lince *::after{box-sizing:border-box}
 #editorial-lince img{max-width:100%;height:auto;display:block;border:0;box-shadow:none}
 
 /* ---------- SLIDER ---------- */
 #editorial-lince .cel-slider{position:relative;aspect-ratio:2400/944;background:#f7ffe8;overflow:hidden}
+#editorial-lince .cel-slider.is-hidden{display:none}
 #editorial-lince .cel-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility .7s}
 #editorial-lince .cel-slide.is-on{opacity:1;visibility:visible}
 #editorial-lince .cel-slide img,#editorial-lince .cel-slide a{width:100%;height:100%;display:block}
@@ -31,11 +33,11 @@ body{margin:0;background:#e9e6df}
 #editorial-lince .cel-brand:hover,#editorial-lince .cel-brand:focus{border-color:var(--cel-mag);background:var(--cel-mag-lt);outline:none}
 #editorial-lince .cel-brand img{width:26px;height:26px;object-fit:contain}
 #editorial-lince .cel-tab{flex:0 0 auto;white-space:nowrap;font-family:'Raleway',sans-serif;font-size:14px;font-weight:600;
-  padding:9px 16px;border-radius:999px;border:1px solid transparent;background:transparent;color:var(--cel-gris);
+  padding:9px 16px;border-radius:999px;border:0;background:transparent;color:var(--cel-gris);text-decoration:none;
   cursor:pointer;text-transform:none;letter-spacing:0;line-height:1.2;transition:background .2s,color .2s,border-color .2s;margin:0}
-#editorial-lince .cel-tab:hover,#editorial-lince .cel-tab:focus{color:#fff;border-color:var(--cel-tinto);background:var(--cel-tinto);outline:none}
-#editorial-lince .cel-tab.is-on{background:var(--cel-mag);color:#fff;border-color:var(--cel-mag)}
-#editorial-lince .cel-tab.is-on:hover,#editorial-lince .cel-tab.is-on:focus{background:var(--cel-tinto);color:#fff;border-color:var(--cel-tinto)}
+#editorial-lince .cel-tab:hover,#editorial-lince .cel-tab:focus{color:#fff;border:0;background:var(--cel-tinto);outline:none}
+#editorial-lince .cel-tab.is-on{background:var(--cel-mag);color:#fff;border:0}
+#editorial-lince .cel-tab.is-on:hover,#editorial-lince .cel-tab.is-on:focus{background:var(--cel-tinto);color:#fff;border:0}
 
 /* ---------- PANELES ---------- */
 #editorial-lince .cel-panel{display:none;padding:40px 20px 56px;scroll-margin-top:70px}
@@ -78,7 +80,7 @@ body{margin:0;background:#e9e6df}
 #editorial-lince .cel-cta p{font-weight:600;margin-bottom:14px}
 
 /* ---------- CONTACTO ---------- */
-#editorial-lince .cel-foot{display:none;background:var(--cel-tinto);color:#fff;padding:36px 20px;flex-direction:column;align-items:center;gap:20px;text-align:center}
+#editorial-lince .cel-foot{display:flex;background:var(--cel-tinto);color:#fff;padding:36px 20px;flex-direction:column;align-items:center;gap:20px;text-align:center;margin-top:auto}
 #editorial-lince .cel-foot.is-visible{display:flex}
 #editorial-lince .cel-foot img{width:220px;filter:brightness(0) invert(1)}
 #editorial-lince .cel-foot h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:600;color:#fff;margin:0 0 6px;text-transform:none}

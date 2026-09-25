@@ -23,11 +23,12 @@
   });
 
   /* ---------- Pestañas ---------- */
-  var tabs=root.querySelectorAll('.cel-tab'), panels=root.querySelectorAll('.cel-panel'), nav=root.querySelector('.cel-nav'), footer=root.querySelector('.cel-foot'), brand=root.querySelector('.cel-brand'), menu=root.querySelector('.cel-nav-in'), menuToggle=root.querySelector('.cel-menu-toggle');
+  var tabs=root.querySelectorAll('.cel-tab'), panels=root.querySelectorAll('.cel-panel'), nav=root.querySelector('.cel-nav'), footer=root.querySelector('.cel-foot'), brand=root.querySelector('.cel-brand'), menu=root.querySelector('.cel-nav-in'), menuToggle=root.querySelector('.cel-menu-toggle'), slider=root.querySelector('.cel-slider');
   function closeMenu(){if(!menu||!menuToggle)return;menu.classList.remove('is-open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Abrir menú');}
   if(menuToggle) menuToggle.addEventListener('click',function(){var open=menu.classList.toggle('is-open');menuToggle.setAttribute('aria-expanded',open?'true':'false');menuToggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');});
   function home(){
     closeMenu();
+    if(slider) slider.classList.remove('is-hidden');
     panels.forEach(function(p){p.classList.remove('is-on');});
     tabs.forEach(function(t){t.classList.remove('is-on');});
     if(footer) footer.classList.remove('is-visible');
@@ -38,6 +39,7 @@
     var ok=false;
     panels.forEach(function(p){var on=p.getAttribute('data-cel-panel')===id;p.classList.toggle('is-on',on);if(on)ok=true;});
     if(!ok) return;
+    if(slider) slider.classList.add('is-hidden');
     if(footer) footer.classList.add('is-visible');
     tabs.forEach(function(t){var on=t.getAttribute('data-cel-tab')===id;t.classList.toggle('is-on',on);
       if(on&&t.scrollIntoView){var box=t.parentNode;box.scrollLeft=t.offsetLeft-(box.clientWidth-t.clientWidth)/2;}});
