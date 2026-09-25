@@ -24,8 +24,8 @@
 
   /* ---------- Pestañas ---------- */
   var tabs=root.querySelectorAll('.cel-tab'), panels=root.querySelectorAll('.cel-panel'), nav=root.querySelector('.cel-nav'), footer=root.querySelector('.cel-foot'), brand=root.querySelector('.cel-brand'), menu=root.querySelector('.cel-nav-in'), menuToggle=root.querySelector('.cel-menu-toggle'), slider=root.querySelector('.cel-slider');
-  function closeMenu(){if(!menu||!menuToggle)return;menu.classList.remove('is-open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Abrir menú');}
-  if(menuToggle) menuToggle.addEventListener('click',function(){var open=menu.classList.toggle('is-open');menuToggle.setAttribute('aria-expanded',open?'true':'false');menuToggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');});
+  function closeMenu(){if(!menu||!menuToggle)return;menu.classList.remove('is-open');nav.classList.remove('menu-open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Abrir menú');}
+  if(menuToggle) menuToggle.addEventListener('click',function(){var open=menu.classList.toggle('is-open');nav.classList.toggle('menu-open',open);menuToggle.setAttribute('aria-expanded',open?'true':'false');menuToggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');});
   function home(){
     closeMenu();
     if(slider) slider.classList.remove('is-hidden');
