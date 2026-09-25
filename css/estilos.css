@@ -1,7 +1,7 @@
 /* Centro Editorial Lince — estilos */
 html{scroll-behavior:smooth}
 body{margin:0;background:#e9e6df}
-#editorial-lince{--cel-mag:#23636a;--cel-mag-dk:#17464b;--cel-mag-lt:#e5f0ef;--cel-crema:#f6f5ef;--cel-tinta:#283334;--cel-gris:#5b6767;--cel-linea:#d9ded9;
+#editorial-lince{--cel-mag:#23636a;--cel-mag-dk:#17464b;--cel-mag-lt:#e5f0ef;--cel-crema:#f6f5ef;--cel-tinta:#000;--cel-gris:#5b6767;--cel-linea:#d9ded9;
   font-family:'Raleway',system-ui,sans-serif;color:var(--cel-tinta);background:var(--cel-crema);
   width:100%;margin:0;line-height:1.6;box-sizing:border-box}
 #editorial-lince *,#editorial-lince *::before,#editorial-lince *::after{box-sizing:border-box}
@@ -63,8 +63,8 @@ body{margin:0;background:#e9e6df}
 #editorial-lince .cel-book-d{font-size:14px;line-height:1.5;color:var(--cel-tinta);margin:4px 0 0}
 #editorial-lince .cel-isbn{font-size:12px;font-weight:600;color:var(--cel-mag-dk);margin:auto 0 0;padding-top:8px;font-variant-numeric:tabular-nums}
 #editorial-lince .cel-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;align-self:flex-start;margin-top:8px;padding:9px 16px;border-radius:999px;
-  background:var(--cel-mag);color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:2px solid var(--cel-mag);transition:background .2s,color .2s}
-#editorial-lince .cel-btn:hover,#editorial-lince .cel-btn:focus{background:#fff;color:var(--cel-mag);outline:none}
+  background:#852244;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:2px solid #852244;transition:background .2s,color .2s}
+#editorial-lince .cel-btn:hover,#editorial-lince .cel-btn:focus{background:#fff;color:#852244;outline:none}
 #editorial-lince .cel-btn-lg{font-size:16px;padding:13px 26px;align-self:center}
 
 /* ---------- ESTADOS VACÍOS ---------- */
